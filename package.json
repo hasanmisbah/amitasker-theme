@@ -1,0 +1,20 @@
+{
+  "name": "amitasker",
+  "version": "1.0.0",
+  "description": "amitasker marketing agency template",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node-sass --output-style=expanded -w scss/ -o css/ --recursive --source-comments --source-map-contents --source-map=css/ ",
+    "build": "node-sass --output-style=expanded scss/ -o css/ --source-map=css/ "
+  },
+  "keywords": [
+    "marketing",
+    "agency",
+    "template"
+  ],
+  "author": "Hasan Misbah <hasanmisbah01@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
