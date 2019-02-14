@@ -11,31 +11,31 @@ let amitasker = function () {
         navbar: function () {
 
             // hide navbar after clicking
-            $('.nav-link').on('click', function () {
-                $('.navbar-toggler').click();
+            jQuery('.nav-link').on('click', function () {
+                jQuery('.navbar-toggler').click();
             });
 
             // setting navbar sticky
-            $(window).on('scroll', function () {
-                var scroll_top = $(window).scrollTop();
+            jQuery(window).on('scroll', function () {
+                var scroll_top = jQuery(window).scrollTop();
 
                 if (scroll_top > 40) {
-                    $('.navbar').addClass('sticky');
+                    jQuery('.navbar').addClass('sticky');
 
                 } else {
-                    $('.navbar').removeClass('sticky');
+                    jQuery('.navbar').removeClass('sticky');
                 }
 
             });
 
         },
         plugin: function () {
-            // $(".skillbar").skillbar();
+            // jQuery(".skillbar").skillbar();
 
             // skillbar data call
             o.init();
 
-            $('.client-slider').slick({
+            jQuery('.client-slider').slick({
                 slidesToShow: 4,
                 slidesToScroll: 2,
                 autoplay: true,
@@ -71,7 +71,7 @@ let amitasker = function () {
                 ]
 
             });
-            $('.testimonial-slider').slick({
+            jQuery('.testimonial-slider').slick({
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 autoplay: true,
@@ -102,7 +102,7 @@ let amitasker = function () {
                     }
                 ]
             });
-            $('.counting').counterUp({
+            jQuery('.counting').counterUp({
                 delay: 10,
                 time: 1000
             });
@@ -147,8 +147,8 @@ var o = {
             return { path: path, stroke: color }
         }
 
-        $('.get').find('.arc').each(function (i) {
-            var t = $(this),
+        jQuery('.get').find('.arc').each(function (i) {
+            var t = jQuery(this),
                 color = t.find('.color').val(),
                 value = t.find('.percent').val(),
                 text = t.find('.text').text();
@@ -177,7 +177,7 @@ var o = {
 
 
 var waypoint = new Waypoint({
-    element: $('#company-stats'),
+    element: jQuery('#company-stats'),
     handler: function (direction) {
         let dir = direction;
         if(dir == 'down'){
@@ -190,14 +190,14 @@ var waypoint = new Waypoint({
 });
 
 let counting = function () {
-    let $counter = $('.counting');
-    $counter.each(function () {
+    let jQuerycounter = jQuery('.counting');
+    jQuerycounter.each(function () {
 
         
-        var $this = $(this),
-            countTo = $this.val();
+        var jQuerythis = jQuery(this),
+            countTo = jQuerythis.val();
             console.log(countTo);
-        $({ countNum: $this.text() }).animate(
+        jQuery({ countNum: jQuerythis.text() }).animate(
             {
                 countNum: countTo
             },
@@ -206,15 +206,15 @@ let counting = function () {
                 duration: 8000,
                 easing: "linear",
                 step: function () {
-                    $this.text(Math.floor(this.countNum));
+                    jQuerythis.text(Math.floor(this.countNum));
                 },
                 complete: function () {
-                   // $this.text(this.countNum);
+                   // jQuerythis.text(this.countNum);
                 }
             }
         );
     });
 };
-$(document).ready(function () {
+jQuery(document).ready(function () {
     amitasker();
 });
