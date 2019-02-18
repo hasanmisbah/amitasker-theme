@@ -24,7 +24,7 @@ $blurple : #192a56;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    &::before, &::after{
+    &:before, &:after{
         box-sizing: inherit;
     }
 }
@@ -137,7 +137,7 @@ section#home{
     background-position: center center;
     position: relative;
     z-index: 2;
-    &::before{
+    &:before{
         content: "";
         position: absolute;
         width: 100%;
@@ -405,7 +405,7 @@ section#team{
     background-position: center center;
     background-size: cover;
     position: relative;
-    &::before{
+    &:before{
         position: absolute;
         content: "";
         width: 100%;
@@ -530,7 +530,7 @@ section#team{
             width: 130px;
             z-index: 1;
             position: relative;
-            &::after {
+            &:after {
                 content: "";
                 width: 100%;
                 height: 100%;
@@ -541,7 +541,7 @@ section#team{
                 left: 0;
                 z-index: -1;
             }
-            &::before {
+            &:before {
                 content: "";
                 width: 100%;
                 height: 100%;
@@ -624,7 +624,7 @@ section#team{
             li{
                 background-color: $blurple;
                 button{
-                    &::before{
+                    &:before{
                         background-color: $blurple;
                     }
                 }
@@ -676,7 +676,7 @@ footer#footer-area{
     position: relative;
     color: #ffffff;
     z-index: 2;
-    &::before{
+    &:before{
         content: "";
         position: absolute;
         left: 0;
@@ -719,7 +719,7 @@ footer#footer-area{
             a{
                 color: $text-white;
             }
-            &::before{
+            &:before{
                 font-family: "Font Awesome 5 Free";
                 content: '\f101';
                 margin:0 5px 0 -15px;
@@ -772,12 +772,12 @@ footer#footer-area{
     
 */
   .hvr-underline-from-center{
-      &::before{
+      &:before{
         background: $effect;
       }
   }
   .hvr-ripple-out{
-      &::before{
+      &:before{
         border: .5px solid $secondary-color;
         border-radius: 50%;
       }

@@ -168,7 +168,7 @@ section#home .home-content h1 {
 }
 
 .section-heading {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .section-heading h2 {
@@ -290,6 +290,7 @@ section#services #services-bottom .single-service-details {
   border-radius: 8px;
   position: relative;
   overflow: hidden;
+  margin: 15px 0;
 }
 
 section#services #services-bottom .single-service-details:before, section#services #services-bottom .single-service-details:after {
@@ -728,7 +729,7 @@ section#team .team-member .picture img {
   padding: 1.3rem 1.5rem;
   color: #233b7a;
   background-color: #ffffff;
-  border-color: #f3f3f3;
+  border-color: #e3e3e3;
 }
 
 #contact .form-control:focus {
