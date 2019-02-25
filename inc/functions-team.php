@@ -1,5 +1,12 @@
 <?php
-// Register Custom Post Type
+/**
+ *  @package  Amitasker_Theme
+ *    ===============================================
+ *              Custom Post Type For Team
+ *    ================================================
+ *
+ */
+
 if (!function_exists('team')):
     /**
      * Function For Creating Team Member
