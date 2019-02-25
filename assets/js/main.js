@@ -1,6 +1,5 @@
 "use strict";
 
-
 let amitasker = function () {
 
     let data = {
@@ -19,7 +18,7 @@ let amitasker = function () {
             jQuery(window).on('scroll', function () {
                 var scroll_top = jQuery(window).scrollTop();
 
-                if (scroll_top > 40) {
+                if (scroll_top >= 40) {
                     jQuery('.navbar').addClass('sticky');
 
                 } else {
@@ -185,7 +184,7 @@ var waypoint = new Waypoint({
         }
         //counting();
        // alert('done');
-       console.log(direction);
+       //console.log(direction);
     }
 });
 

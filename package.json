@@ -15,6 +15,7 @@
   "author": "Hasan Misbah <hasanmisbah01@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "eslint-config-wordpress": "^2.0.0",
     "node-sass": "^4.11.0"
   }
 }

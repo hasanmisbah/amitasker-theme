@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ruleset name="Amitasker">
+ <description>Rule set for Amitasker WordPress Theme</description>
+
+  
+
+ <rule ref="Generic.Files.LineLength">
+  <properties>
+   <property name="lineLimit" value="180"/>
+   <property name="absoluteLineLimit" value="0"/>
+  </properties>
+ </rule>
+</ruleset>
