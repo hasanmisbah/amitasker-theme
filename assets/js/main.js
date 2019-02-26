@@ -215,5 +215,12 @@ let counting = function () {
     });
 };
 jQuery(document).ready(function () {
+
+    var adminbar = $('wpadminbar');
+    if(adminbar){
+        $('section').css({
+            'padding-top' : '50px'
+        });
+    }
     amitasker();
 });
