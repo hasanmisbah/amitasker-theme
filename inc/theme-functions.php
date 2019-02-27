@@ -27,7 +27,8 @@ add_action( 'after_setup_theme', 'Amitasker_setup' );
     require_once get_template_directory().'/inc/functions-script.php';
     require_once get_template_directory().'/inc/functions-team.php';
     require_once get_template_directory().'/inc/function-services.php';
-    require_once get_template_directory().'/lib/kirki/kirki.php';
+    require_once get_template_directory().'/inc/customizer/customizer.php';
+   // require_once get_template_directory().'/lib/kirki/kirki.php';
 
 if (!function_exists( 'Amitasker_setup')) :
     /**
@@ -89,16 +90,3 @@ if (!function_exists('amitasker')) :
         );
     }
 endif;
-
-// Kirki::add_config('theme_config_id', array(
-//     'capability' => 'edit_theme_options',
-//     'option_type' => 'theme_mod',
-// ));
-
-
-function kirki(){
-    return array(
-        'url_path'     => get_template_directory_uri() . '/lib/kirki/'
-    );
-}
-add_filter('kirki/config', 'kirki');

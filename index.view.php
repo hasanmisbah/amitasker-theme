@@ -4,14 +4,13 @@
                 <div class="row home-content">
                     <div class="col-md-7 col-12 col-sm-7">
                         <div class="hero-text">
-                            <h1>Leveling up your Digital Marketing</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente porro necessitatibus
-                                perspiciatis enim fugit aspernatur.</p>
-                            <a href="#" class="hvr-underline-from-center btn btn-secondary btn-ami btn-lg">Learn More</a>
+                            <h1><?php echo esc_html__(get_theme_mod('hero_text'), 'amitasker') ?> </h1>
+                            <p> <?php echo esc_html__(get_theme_mod('hero_subtext'), 'amitasker') ?> </p>
+                            <a href="<?php echo esc_html__(get_theme_mod('hero_link'), 'amitasker') ?>" class="hvr-underline-from-center btn btn-secondary btn-ami btn-lg"><?php echo esc_html__(get_theme_mod('hero_btn'), 'amitasker') ?></a>
                         </div>
                     </div>
                     <div class="col-md-5 sm-5 col-12">
-                        <img class="img-fluid" src="./assets/img/social-media-marketing.png" alt="">
+                        <img class="img-fluid" src="<?php echo esc_html__(get_theme_mod('hero_images'), 'amitasker')?>">
                     </div>
                 </div>
             </div>
@@ -29,19 +28,10 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6 col-12">
-                        <img class="img-fluid" src="./assets/img/box-images.png" alt="">
+                        <img class="img-fluid" src="<?php echo esc_html__(get_theme_mod('about_images'), 'amitasker')?>" alt="">
                     </div>
                     <div class="col-md-6 col-sm-6 col-12">
-                        <p>In a world where every marketing services company says they “do” social media, Ignite Social
-                            Media leads the way, with a team of dozens of full-time staff. We work around the world
-                            from our offices in North Carolina and Michigan, providing our clients with a depth of
-                            knowledge that is unmatched. Ignite Social Media is also certified as a Women’s Business
-                            Enterprise by the Women’s Business Enterprise National Council (WBENC), the nation’s
-                            largest third-party certifier of the businesses owned and operated by women in the United
-                            States. We recognize the commitment to supplier diversity that is embraced by corporations
-                            and government today, and our focus on representing a diverse set of backgrounds and
-                            experiences can help your digital marketing campaigns Our leadership team has been together
-                            for more than 7 years; social media pioneers focused on growth for our clients.</p>
+                        <p><?php echo esc_html__(get_theme_mod('about_text'), 'amitasker')?></p>
                         <div class="social">
                             <span class="h4">Follow us : </span>
                             <ul class="social-nav">
