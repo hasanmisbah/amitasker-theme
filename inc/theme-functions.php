@@ -27,8 +27,8 @@ add_action( 'after_setup_theme', 'Amitasker_setup' );
     require_once get_template_directory().'/inc/functions-script.php';
     require_once get_template_directory().'/inc/functions-team.php';
     require_once get_template_directory().'/inc/function-services.php';
+    require_once get_template_directory().'/inc/function-testimonial.php';
     require_once get_template_directory().'/inc/customizer/customizer.php';
-   // require_once get_template_directory().'/lib/kirki/kirki.php';
 
 if (!function_exists( 'Amitasker_setup')) :
     /**
@@ -75,6 +75,7 @@ if (!function_exists('amitasker')) :
          * See: https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
          */
         add_theme_support('post-thumbnails');
+
 
         // Image size for single posts
         //add_image_size('single-post-thumbnail', 590, 180);

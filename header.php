@@ -2,8 +2,7 @@
 /**
 * Header template 
 *
-* @package WordPress
-* @subpackage Amitasker
+* @package Amitasker
  */
  ?>
 <!DOCTYPE html>
@@ -22,7 +21,7 @@
     <header id="header">
         <nav id="main-nav" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
             <div class="container">
-                <a href="#" class="navbar-brand">Amitasker</a>
+                <a href="#" class="navbar-brand"><?php bloginfo('name'); ?></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                     <span class="navbar-toggler-icon"></span>
                 </button>

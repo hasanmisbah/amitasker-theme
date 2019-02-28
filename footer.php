@@ -25,9 +25,9 @@
                     <div class="col-12 col-md-4 col-sm-4 col-lg-4">
                         <div class="social">
                             <ul class="social-nav">
-                                <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
+                                <li><a href="https://facebook.com<?php echo esc_html__(get_theme_mod('facebook_icon'), 'amitasker') ?>"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                                <li><a href="https://twitter.com<?php echo esc_html__(get_theme_mod('twitter_icon'), 'amitasker') ?>"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="https://instagram.com<?php echo esc_html__(get_theme_mod('instagram_icon'), 'amitasker') ?>"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                     </div>
