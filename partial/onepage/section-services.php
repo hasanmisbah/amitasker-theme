@@ -103,15 +103,6 @@
                             wp_reset_postdata();
                             ?>
 
-                        <!-- <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                            <div class="single-service-details">
-                                <span class="lnr lnr-select"></span>
-                                <h4>Social Media Strategy Development</h4>
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique commodi
-                                    provident nisi voluptatum iure? Ducimus.</p>
-                            </div>
-                        </div> -->
-
                     </div>
                 </div>
             </div>

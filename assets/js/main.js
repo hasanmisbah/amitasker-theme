@@ -180,7 +180,7 @@ var waypoint = new Waypoint({
     handler: function (direction) {
         let dir = direction;
         if(dir == 'down'){
-            counting();
+            //counting();
         }
         //counting();
        // alert('done');

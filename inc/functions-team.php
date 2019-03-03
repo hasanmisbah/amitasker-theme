@@ -55,7 +55,7 @@ if (!function_exists('team')):
             'description'           => __('', 'amitasker'),
             'labels'                => $labels,
             'menu_icon'             => 'dashicons-admin-users',
-            'supports'              => array('title', 'editor', 'thumbnail', 'custom-fields'),
+            'supports'              => array('custom-fields'),
             'taxonomies'            => array('team-member'),
             'public'                => true,
             'show_ui'               => true,

@@ -42,7 +42,7 @@ function Testimonial()
         'label' => __('Testimonial', 'amitasker'),
         'description' => __('Clients Testimonial', 'amitasker'),
         'labels' => $labels,
-        'supports' => array('title', 'editor', 'custom-fields'),
+        'supports' => array('custom-fields'),
         'taxonomies' => array('testimonial'),
         'hierarchical' => true,
         'public' => true,
