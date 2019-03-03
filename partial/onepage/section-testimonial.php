@@ -60,21 +60,37 @@
                     <div class="row">
                         <div class="col-12 col-md-12 col-sm-12 col-lg-12">
                             <div class="client-slider">
+                                <?php 
+                                    // WP_Query arguments
+                                    $args = array(
+                                        'post_type' => array('slider'),
+                                        'post_status' => array('publish'),
+                                        'nopaging' => true,
+                                        'order' => 'ASC',
+                                        'orderby' => 'menu_order',
+                                        'posts_per_page' => 9,
+                                    );
+                                    // The Query
+                                    $slider = new WP_Query($args);
+
+                                    // The Loop
+                                    if ($slider->have_posts()) {
+
+                                        while ($slider->have_posts()) {
+                                            $slider->the_post();
+                                ?>
                                 <div class="slide">
-                                    <img class="img-fluid" src="./assets/img/brand/brand1.png" alt="">
+                                    <img class="img-fluid" src="<?php echo get_field('client_logo')['url'] ?>" alt="">
                                 </div>
-                                <div class="slide">
-                                    <img class="img-fluid" src="./assets/img/brand/brand2.png" alt="">
-                                </div>
-                                <div class="slide">
-                                    <img class="img-fluid" src="./assets/img/brand/brand3.png" alt="">
-                                </div>
-                                <div class="slide">
-                                    <img class="img-fluid" src="./assets/img/brand/brand4.png" alt="">
-                                </div>
-                                <div class="slide">
-                                    <img class="img-fluid" src="./assets/img/brand/brand5.png" alt="">
-                                </div>
+                                <?php
+                                }
+                            } else {
+                                echo '<p>' . esc_html_e('No Clients Found', 'amitasker') . '</p>';
+                            }
+
+                            // Restore original Post Data
+                                wp_reset_postdata();
+                            ?>
                             </div><!-- end client slider -->
                         </div><!-- end Collumn -->
                     </div><!-- end Row -->

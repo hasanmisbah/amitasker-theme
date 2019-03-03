@@ -19,7 +19,7 @@
                 <div class="row">
                     <div class="col-12 col-md-8 col-sm-8 col-lg-8">
                         <div class="copyright">
-                            <p>Copyright &copy; Amitasker, Social media management Services.</p>
+                            <p>Copyright &copy; <?php bloginfo('name')?>, <?php bloginfo('description')?>. allright Reserved</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-4 col-sm-4 col-lg-4">

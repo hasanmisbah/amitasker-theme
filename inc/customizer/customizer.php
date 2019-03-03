@@ -272,6 +272,54 @@ if(!function_exists('amitasker_customizer')) :
                 'type'      => ($key == 'cta_btn_link'? 'url' : 'text')
             ));
         endforeach;
+        $amitasker_customizer->add_section('skill-section', array(
+            'title' => 'Skill Section',
+            'capability' => 'edit_theme_options',
+            'priority'  => 50,
+            'panel'     => 'home_panel'
+        ));
+
+        $amitasker_customizer->add_setting('team_left_images', array(
+            'default'   => '',
+            'transport' => 'refresh'
+        ));
+        $amitasker_customizer->add_control(
+            new WP_Customize_Image_Control($amitasker_customizer, 'team_left_images', array(
+                'section' => 'skill-section',
+                'label'     => 'Skill Left Images Here',
+                'settings' => 'team_left_images'
+            ))
+        );
+
+        $team_section = array(
+            'skill_1' => 'Skill 1',
+            'skill_2' => 'Skill 2',
+            'skill_3' => 'Skill 3',
+            'skill_4' => 'Skill 4',
+        );
+        foreach ($team_section as $key => $value) {
+
+            $amitasker_customizer->add_setting($key.'_name', array(
+               'default'    => '',
+               'transport'  => 'refresh' 
+            ));
+            $amitasker_customizer->add_control($key.'_name', array(
+                'section'   => 'skill-section',
+                'label'     => $value.' Name',
+                'type'      => 'text'
+            ));
+
+            $amitasker_customizer->add_setting($key.'_value', array(
+               'default'    => '',
+               'transport'  => 'refresh' 
+            ));
+            $amitasker_customizer->add_control($key.'_value', array(
+                'section'   => 'skill-section',
+                'label'     => $value.' Percentage',
+                'type'      => 'number'
+            ));
+        }
+
     }
 endif;
 add_action('customize_register', 'amitasker_customizer');

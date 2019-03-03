@@ -62,7 +62,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="section-heading text-center">
-                                <h2>Social Media Services</h2>
+                                <h2>More Services We Offer</h2>
                             </div><!-- End Section Title -->
                         </div>
 
@@ -100,7 +100,7 @@
                             }
 
                             // Restore original Post Data
-                            wp_reset_postdata();
+                                wp_reset_postdata();
                             ?>
 
                     </div>

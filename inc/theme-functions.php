@@ -22,44 +22,42 @@
 // apply functions after activating Theme.
 add_action( 'after_setup_theme', 'Amitasker_setup' );
 
-// load footer widgets functions File
-    require_once get_template_directory().'/inc/functions-footer-widget.php';
-    require_once get_template_directory().'/inc/functions-script.php';
-    require_once get_template_directory().'/inc/functions-team.php';
-    require_once get_template_directory().'/inc/function-services.php';
-    require_once get_template_directory().'/inc/function-testimonial.php';
-    require_once get_template_directory().'/inc/customizer/customizer.php';
-
 if (!function_exists( 'Amitasker_setup')) :
     /**
      * Hooks To Activate After Theme Setup
      * 
-     * @return amitasker_scripts,script_data,footer_widgets
+     * @return array
      */
-    function Amitasker_setup()
-    {
+    function Amitasker_setup(){
+
+        // load functions File
+        require_once get_template_directory() . '/inc/functions-footer-widget.php';
+        require_once get_template_directory() . '/inc/functions-script.php';
+        require_once get_template_directory() . '/inc/functions-team.php';
+        require_once get_template_directory() . '/inc/function-services.php';
+        require_once get_template_directory() . '/inc/function-testimonial.php';
+        require_once get_template_directory() . '/inc/function-client-slide.php';
+        require_once get_template_directory() . '/inc/customizer/customizer.php';
+        //require_once get_template_directory() . '/lib/advanced-custom-fields/acf.php';
+        require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+        
         // Theme CSS And JS File Loading
         add_action('wp_enqueue_scripts', 'amitasker_scripts');
         // Adding Script Attribute for fontawesome
         add_filter('script_loader_tag', 'script_data', 10, 5);
         // Registering Sidebar
         add_action('widgets_init', 'footer_widgets');
+
+
+
         // disable Gutenberg for posts
         add_filter('use_block_editor_for_post', '__return_false', 10);
         // disable Gutenberg for post types
         add_filter('use_block_editor_for_post_type', '__return_false', 10);
-    }
-endif;
 
-if (!function_exists('amitasker')) :
-    /**
-     * Hooks To Activate After Theme Setup
-     *
-     * @return void
-     */
-    function amitasker()
-    {
-        load_theme_textdomain('amitasker', get_template_directory() . '/languages');
+
+
+        //load_theme_textdomain('amitasker', get_template_directory() . '/languages');
         // Add default posts and comments RSS feed links to head.
         add_theme_support('automatic-feed-links');
         /*
@@ -89,5 +87,11 @@ if (!function_exists('amitasker')) :
             'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
             )
         );
+
+        //Register Main Navigation
+        register_nav_menus( array(
+            'primary' => __( 'Primary Menu', 'amitasker' )
+        ) );
+
     }
 endif;

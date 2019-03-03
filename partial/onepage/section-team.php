@@ -9,7 +9,7 @@
                     </div>
                     <div class="col-12 col-sm-8 col-md-8 col-lg-8">
                         <div class="team-top">
-                            <img class="img-fluid" src="./assets/img/team.png" alt="">
+                            <img class="img-fluid" src="<?php echo esc_html__(get_theme_mod('team_left_images'), 'amitasker') ?>">
                         </div>
                     </div>
                     <div class="col-12 col-sm-4 col-md-4 col-lg-4">
@@ -20,30 +20,34 @@
                                     <div class="legend">
                                         <div class="skills">
                                             <ul>
-                                                <li class="seo">SEO</li>
-                                                <li class="smm">SMM</li>
-                                                <li class="web">Web Design</li>
-                                                <li class="gfx">Graphics Design</li>
+                                                <li class="seo"><?php echo esc_html__(get_theme_mod('skill_1_name'), 'amitasker') ?></li>
+                                                <li class="smm"><?php echo esc_html__(get_theme_mod('skill_2_name'), 'amitasker') ?></li>
+                                                <li class="web"><?php echo esc_html__(get_theme_mod('skill_3_name'), 'amitasker') ?></li>
+                                                <li class="gfx"><?php echo esc_html__(get_theme_mod('skill_4_name'), 'amitasker') ?></li>
                                             </ul>
                                         </div>
                                     </div><!-- end legend area -->
 
                                     <div id="diagram">
                                         <div class="get">
-                                            <div class="arc"><span class="text">SMM</span>
-                                                <input class="percent" type="hidden" value="80" />
+                                            <div class="arc">
+                                                <span class="text"><?php echo esc_html__(get_theme_mod('skill_1_name'), 'amitasker') ?></span>
+                                                <input class="percent" type="hidden" value="<?php echo esc_html__(get_theme_mod('skill_1_value'), 'amitasker') ?>" />
                                                 <input class="color" type="hidden" value="#0097aa" />
                                             </div>
-                                            <div class="arc"><span class="text">SEO</span>
-                                                <input class="percent" type="hidden" value="90" />
+                                            <div class="arc">
+                                                <span class="text"><?php echo esc_html__(get_theme_mod('skill_2_name'), 'amitasker') ?></span>
+                                                <input class="percent" type="hidden" value="<?php echo esc_html__(get_theme_mod('skill_2_value'), 'amitasker') ?>" />
                                                 <input class="color" type="hidden" value="#f58d00" />
                                             </div>
-                                            <div class="arc"><span class="text">Web Design</span>
-                                                <input class="percent" type="hidden" value="95" />
+                                            <div class="arc">
+                                                <span class="text"><?php echo esc_html__(get_theme_mod('skill_3_name'), 'amitasker') ?></span>
+                                                <input class="percent" type="hidden" value="<?php echo esc_html__(get_theme_mod('skill_3_value'), 'amitasker') ?>" />
                                                 <input class="color" type="hidden" value="#00a9ec" />
                                             </div>
-                                            <div class="arc"><span class="text">Graphics Design</span>
-                                                <input class="percent" type="hidden" value="98" />
+                                            <div class="arc">
+                                                <span class="text"><?php echo esc_html__(get_theme_mod('skill_4_name'), 'amitasker') ?></span>
+                                                <input class="percent" type="hidden" value="<?php echo esc_html__(get_theme_mod('skill_4_value'), 'amitasker') ?>" />
                                                 <input class="color" type="hidden" value="#d32c2c" />
                                             </div>
                                         </div>
@@ -61,74 +65,47 @@
                             <h2>Meet Our Awesome Team Members</h2>
                         </div><!-- End Section Title -->
                     </div>
+                    <?php 
+                    $args = array(
+                        'post_type' => array('team'),
+                        'post_status' => array('publish'),
+                        'nopaging' => true,
+                        'order' => 'ASC',
+                        'orderby' => 'menu_order',
+                        'posts_per_page' => 4,
+                    );
+                        $member = new WP_Query($args);
+                        if ($member->have_posts()) {
+                            while ($member->have_posts()) {
+                                $member->the_post();
+                    ?>
                     <div class="col-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="team-member">
                             <div class="picture">
-                                <img class="img-fluid" src="./assets/img/client1.png">
+                                <img class="img-fluid" src="<?php echo get_field('image')['url'] ?>">
                             </div>
                             <div class="team-content">
-                                <h3 class="name">Michele Miller</h3>
-                                <h4 class="title">Head of Idea</h4>
+                                <h3 class="name"><?php echo get_field('members_name') ?></h3>
+                                <h4 class="title"><?php echo get_field('position') ?></h4>
                             </div>
                             <ul class="social">
-                                <li><a href="#" class="fab fa-facebook" aria-hidden="true"></a></li>
-                                <li><a href="#" class="fab fa-twitter" aria-hdiden="true"></a></li>
-                                <li><a href="#" class="fab fa-google-plus" aria-hidden="true"></a></li>
-                                <li><a href="#" class="fab fa-linkedin" aria-hidden="true"></a></li>
+                                <li><a href="<?php echo get_field('facebook_url') ?>" class="fab fa-facebook" aria-hidden="true"></a></li>
+                                <li><a href="<?php echo get_field('twitter_url') ?>" class="fab fa-twitter" aria-hdiden="true"></a></li>
+                                <li><a href="<?php echo get_field('github_profile') ?>" class="fab fa-github" aria-hidden="true"></a></li>
+                                <li><a href="<?php echo get_field('linked_in') ?>" class="fab fa-linkedin" aria-hidden="true"></a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-3 col-md-3 col-lg-3">
-                        <div class="team-member">
-                            <div class="picture">
-                                <img class="img-fluid" src="./assets/img/client2.png">
-                            </div>
-                            <div class="team-content">
-                                <h3 class="name">John Doe</h3>
-                                <h4 class="title">Web Developer</h4>
-                            </div>
-                            <ul class="social">
-                                <li><a href="#" class="fab fa-facebook" aria-hidden="true"></a></li>
-                                <li><a href="#" class="fab fa-twitter" aria-hdiden="true"></a></li>
-                                <li><a href="#" class="fab fa-google-plus" aria-hidden="true"></a></li>
-                                <li><a href="#" class="fab fa-linkedin" aria-hidden="true"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-3 col-md-3 col-lg-3">
-                        <div class="team-member">
-                            <div class="picture">
-                                <img class="img-fluid" src="./assets/img/client1.png">
-                            </div>
-                            <div class="team-content">
-                                <h3 class="name">Jane Doe</h3>
-                                <h4 class="title">Cute Designer</h4>
-                            </div>
-                            <ul class="social">
-                                <li><a href="#" class="fab fa-facebook" aria-hidden="true"></a></li>
-                                <li><a href="#" class="fab fa-twitter" aria-hdiden="true"></a></li>
-                                <li><a href="#" class="fab fa-google-plus" aria-hidden="true"></a></li>
-                                <li><a href="#" class="fab fa-linkedin" aria-hidden="true"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-3 col-md-3 col-lg-3">
-                        <div class="team-member">
-                            <div class="picture">
-                                <img class="img-fluid" src="./assets/img/client1.png">
-                            </div>
-                            <div class="team-content">
-                                <h3 class="name">John Smith</h3>
-                                <h4 class="title">Idea Machine</h4>
-                            </div>
-                            <ul class="social">
-                                <li><a href="#" class="fab fa-facebook" aria-hidden="true"></a></li>
-                                <li><a href="#" class="fab fa-twitter" aria-hdiden="true"></a></li>
-                                <li><a href="#" class="fab fa-google-plus" aria-hidden="true"></a></li>
-                                <li><a href="#" class="fab fa-linkedin" aria-hidden="true"></a></li>
-                            </ul>
-                        </div>
-                    </div>
+
+                            <?php
+                                    }
+                                } else {
+                                    echo '<p>' . esc_html_e('No Services Found', 'amitasker') . '</p>';
+                                }
+
+                                // Restore original Post Data
+                                    wp_reset_postdata();
+                            ?>
                 </div><!-- end row -->
                 <!-- end team member area -->
             </div><!-- end Container -->
