@@ -1,6 +1,5 @@
 <?php
 
-
 if(!function_exists('amitasker_customizer')) :
     function amitasker_customizer($amitasker_customizer){
         /**
@@ -90,19 +89,6 @@ if(!function_exists('amitasker_customizer')) :
             'label'     => 'Button Text Here',
             'type'      => 'text'
         ));
-
-        $amitasker_customizer->add_setting('hero_images', array(
-            'default'   => get_template_directory_uri().'/assets/img/social-media-marketing.png',
-            'transport' => 'refresh'
-        ));
-
-        $amitasker_customizer->add_control(
-            new WP_Customize_Image_Control($amitasker_customizer, 'hero_images', array(
-                'section' => 'home-section',
-                'label'     => 'Hero Images Here',
-                'settings' => 'hero_images'
-            ))
-        );
 
         /**
          * Registering About Section

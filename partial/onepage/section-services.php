@@ -62,7 +62,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="section-heading text-center">
-                                <h2>More Services We Offer</h2>
+                                <h2>We Also Offer</h2>
                             </div><!-- End Section Title -->
                         </div>
 
@@ -88,7 +88,7 @@
                                         <div class="col-12 col-sm-4 col-md-4 col-lg-4">
                                             <div class="single-service-details">
                                                 <span class="<?php echo get_field('services_icon')  ?>"></span>
-                                                <h4><?php the_title() ?></h4>
+                                                <h4><?php the_title() ?>hello</h4>
                                                 <p><?php the_excerpt() ?></p>
                                             </div>
                                         </div>

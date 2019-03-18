@@ -38,5 +38,6 @@ if (!function_exists('Footer_widgets')):
             );
         endforeach;
     }
+    add_action('widgets_init', 'footer_widgets');
 endif;
     

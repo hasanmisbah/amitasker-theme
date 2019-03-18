@@ -21,6 +21,6 @@
  */
 
 // require theme Extarnal Functions.
-    require_once get_template_directory() . '/inc/theme-functions.php';
+require_once get_template_directory() . '/inc/theme-functions.php';
 // Load Admin panel Functionalities.
-    require_once get_template_directory() . '/inc/functions-admin.php';
+require_once get_template_directory() . '/inc/functions-admin.php';

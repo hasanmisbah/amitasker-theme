@@ -40,13 +40,15 @@ if (!function_exists( 'Amitasker_setup')) :
         require_once get_template_directory() . '/inc/customizer/customizer.php';
         //require_once get_template_directory() . '/lib/advanced-custom-fields/acf.php';
         require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+        require_once get_template_directory() . '/inc/function-home-widget.php';
+        require_once get_template_directory() . '/inc/widgets/Class-price-widgets.php';
         
         // Theme CSS And JS File Loading
         add_action('wp_enqueue_scripts', 'amitasker_scripts');
         // Adding Script Attribute for fontawesome
         add_filter('script_loader_tag', 'script_data', 10, 5);
         // Registering Sidebar
-        add_action('widgets_init', 'footer_widgets');
+        
 
 
 

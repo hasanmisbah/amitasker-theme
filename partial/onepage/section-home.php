@@ -12,7 +12,15 @@
                         </div>
                     </div>
                     <div class="col-md-5 sm-5 col-12">
-                        <img class="img-fluid" src="<?php echo esc_html__(get_theme_mod('hero_images'), 'amitasker')?>">
+                        <div class="container">
+                            <div class="row">
+                                <?php 
+                                    if (is_active_sidebar('home-right')):
+                                        dynamic_sidebar('home-right');
+                                    endif;
+                                ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

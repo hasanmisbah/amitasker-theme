@@ -8,46 +8,13 @@
                         </div><!-- End Section Title -->
                     </div>
 
-                    <!-- single Packages -->
-                    <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                        <div class="single-package">
-                            <h2 class="package-title">Basic</h2>
-                            <span>Facebook Page Management</span>
-                            <ul class="package-item">
-                                <li>Professionally crafted contents</li>
-                                <li>Customer targeting analysis</li>
-                                <li>Custom graphics creation</li>
-                                <li>Engage broader audience</li>
-                                <li>Specific campaigns</li>
-                                <li>Build brand awareness</li>
-                                <li>Response and chat</li>
-                                <li>Monitor campaigns</li>
-                            </ul>
-                            <a href="#" class="btn btn-ami btn-primary">Choose Plan</a>
-                        </div>
-                    </div><!-- Single Package -->
+                    <?php
+                        if (is_active_sidebar('price_widgets')):
+                            dynamic_sidebar('price_widgets');
+                        endif; ?>
 
                     <!-- single Packages -->
-                    <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                        <div class="single-package">
-                            <h2 class="package-title">Ultimate</h2>
-                            <span>Facebook, twitter and instagram</span>
-                            <ul class="package-item">
-                                <li>Professionally crafted contents</li>
-                                <li>Customer targeting analysis</li>
-                                <li>Custom graphics creation</li>
-                                <li>Engage broader audience</li>
-                                <li>Specific campaigns</li>
-                                <li>Build brand awareness</li>
-                                <li>Response and chat</li>
-                                <li>Monitor campaigns</li>
-                            </ul>
-                            <a href="#" class="btn btn-ami btn-primary">Choose Plan</a>
-                        </div>
-                    </div><!-- Single Package -->
-
-                    <!-- single Packages -->
-                    <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+                    <!-- <div class="col-12 col-sm-4 col-md-4 col-lg-4">
                         <div class="single-package">
                             <h2 class="package-title">Platinum</h2>
                             <span>All Of Social Media and one addons</span>
@@ -63,7 +30,8 @@
                             </ul>
                             <a href="#" class="btn btn-ami btn-primary">Choose Plan</a>
                         </div>
-                    </div><!-- Single Package -->
+                    </div> -->
+                    <!-- Single Package -->
                 </div><!-- end row -->
             </div>
             <div class="container-fluid" id="cta-package">
